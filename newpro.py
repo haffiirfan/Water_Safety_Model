@@ -1,8 +1,6 @@
 import pickle
 import streamlit as st
-import sklearn
 import numpy as np
-import os
 
 # 1. Page Setup
 st.set_page_config(page_title="Full Water Potability Predictor", layout="centered")
