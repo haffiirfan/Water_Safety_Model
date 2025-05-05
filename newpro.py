@@ -43,8 +43,12 @@ st.markdown(
     unsafe_allow_html=True
 )
 #2 loading training model
-with open("model.pkl", "rb") as file:
-    loaded_model = pickle.load(file)
+try:
+    with open("model.pkl", "rb") as file:
+        loaded_model = pickle.load(file)
+except Exception as e:
+    st.error(f"Error loading model: {e.__class__.__name__} - {str(e)}")
+
 
 print(loaded_model)
 
